@@ -8,7 +8,7 @@
 /* TEMA DARK */
 :root[data-theme='dark'] {
   --texto-color: #F2F2F2;            /* cor principal Textos */
-  --background-color: #403013;       /* cor de Fundo */
+  --background-color: hsl(32, 76%, 18%);       /* cor de Fundo */
   --secondary-bg-color: #8C6C30;     /* cor de Fundo Secundário */
   --primary-border-color: #F2BA52;   /* cor de Borda Principal */
   --secondary-border-color: #BF800A; /* cor de Borda Secundária */
@@ -21,7 +21,7 @@
 /* TEMA LIGHT */
 :root[data-theme='light'] {
   --primary-color: #403013;          /* cor principal Textos */
-  --background-color: #F2F2F2;       /* cor de Fundo */
+  --background-color: hsl(50, 91%, 91%);       /* cor de Fundo */
   --texto-color: #403013;            /* cor do Texto */
   --primary-bg-color: #F2BA52;       /* cor de Fundo Principal */
   --secondary-bg-color: #BF800A;     /* cor de Fundo Secundário */
@@ -134,16 +134,16 @@ h6 {
 }
 
 .header .logo {
-  line-height: 1;
+  line-height: 5;
 }
 
 .header .logo img {
-  max-height: 50px;
-  margin-right: 8px;
+  max-height: 60px;
+  margin-right: 10px;
 }
 
 .header .logo h1 {
-  font-size: 32px;
+  font-size: 72px;
   margin: 0;
   font-weight: 400;
   color: var(--heading-color);
@@ -1045,11 +1045,15 @@ section,
 /*--------------------------------------------------------------
 # Services Section
 --------------------------------------------------------------*/
-.services .service-item {
-  background-color:var(--secondary-bg-color);
+
+.service-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1; /* Faz com que o item ocupe toda a altura da coluna */
   padding: 50px 30px;
+  background-color: var(--secondary-bg-color);
   transition: all 0.3s ease-in-out;
-  height: 100%;
   position: relative;
   z-index: 1;
 }
@@ -1088,7 +1092,7 @@ section,
 }
 
 .services .service-item h4 a {
-  color:var(--title-color);
+  color: var(--title-color);
   transition: ease-in-out 0.3s;
 }
 
@@ -1114,6 +1118,7 @@ section,
   inset: 0;
   border-radius: 0px;
 }
+
 
 /*--------------------------------------------------------------
 # Pricing Section
