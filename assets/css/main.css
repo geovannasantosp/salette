@@ -39,6 +39,59 @@
   scroll-behavior: smooth;
 }
 
+.map-responsive {
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0;
+}
+
+.map-responsive iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+
+
+.typed {
+  color: var(--link-hover); /* ou a cor que quiser */
+  font-weight: bold;
+}
+
+
+/* HERO */
+#hero{
+  background-image: url("../img/mae.jpg"); /* ajuste o caminho se estiver diferente */
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 10;
+    min-height: 300px; /* ou o tamanho que você desejar */
+}
+
+
+#hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8); /* Sombra escura opcional para contraste */
+  z-index: 0;
+}
+
+#hero .container,
+#hero h2,
+#hero p {
+  position: relative;
+  z-index: 1;
+}
+
+
 /*--------------------------------------------------------------
 # General Styling & Shared Classes
 --------------------------------------------------------------*/
@@ -1230,3 +1283,92 @@ section,
   background-color: color-mix(in srgb, var(--accent-color) 90%, white 10%);
 }
 
+
+
+
+/* Loja Paroquial - Estilo isolado */
+
+    /* Produto */
+.produto {
+  background-color: #1e1e1e;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  text-align: center;
+  padding: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.produto:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 18px rgba(255, 255, 255, 0.1);
+}
+
+/* Imagem */
+.produto img {
+  max-width: 100%;
+  border-radius: 8px;
+  cursor: zoom-in;
+  transition: transform 0.3s ease;
+}
+
+.produto img:hover {
+  transform: scale(1.08);
+}
+
+/* Nome do produto */
+.produto h5 {
+  margin: 1rem 0 0.5rem;
+  font-size: 1.1rem;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+/* Botão WhatsApp */
+.btn-whatsapp {
+  background-color: #25d366;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  text-decoration: none;
+  display: inline-block;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.btn-whatsapp:hover {
+  background-color: #1ebe57;
+  color: white;
+  text-decoration: none;
+}
+
+/* Título da página */
+h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+/* Link do lightbox */
+a.glightbox {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+/* Responsividade (ajuste para telas menores) */
+@media (max-width: 576px) {
+  .produto h5 {
+    font-size: 1rem;
+  }
+
+  .btn-whatsapp {
+    font-size: 0.875rem;
+    padding: 0.4rem 0.8rem;
+  }
+}
